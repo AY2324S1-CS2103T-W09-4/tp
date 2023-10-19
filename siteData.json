@@ -113,6 +113,7 @@
         "viewing-help-help": "Viewing help : help",
         "adding-a-person-add": "Adding a person: add",
         "adding-a-remark-to-a-person-remark": "Adding a remark to a person: remark",
+        "viewing-a-person-s-details-view": "Viewing a person's details: view",
         "adding-github-linkedin-username-for-a-user-add-linkedin-github": "Adding Github/LinkedIn username for a user: 'add linkedin/github'",
         "opening-user-linkedin-or-github-account-linkedin-or-github": "Opening user LinkedIn or GitHub account: 'linkedin' or 'github'",
         "listing-all-persons-list": "Listing all persons : list",
