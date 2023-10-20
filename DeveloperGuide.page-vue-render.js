@@ -230,13 +230,13 @@ with(this){return _c('p',[_c('strong',[_v("Use case: Add a person")])])}
 with(this){return _c('p',[_c('strong',[_v("MSS")])])}
 },function anonymous(
 ) {
-with(this){return _c('ol',[_c('li',[_v("User requests to add a person.")]),_v(" "),_c('li',[_v("JABPro shows that command has been executed successfully.")]),_v(" "),_c('li',[_v("JABPro adds the person to the list of persons."),_c('br'),_v("\nUse case ends.")])])}
+with(this){return _c('ol',[_c('li',[_v("User requests to add a person.")]),_v(" "),_c('li',[_v("JABPro shows that command has been executed successfully.")]),_v(" "),_c('li',[_v("JABPro adds the person to the list of persons.\nUse case ends.")])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Extensions")])])}
 },function anonymous(
 ) {
-with(this){return _c('ul',[_c('li',[_v("2a. User does not provide the correct information for a person to be added.\n"),_c('ul',[_c('li',[_v("2a1. JABPro shows an error message and provides course of action for remedy."),_c('br'),_v("\nUse case resumes at step 1.")])])]),_v(" "),_c('li',[_v("2b. User has already been added to the list of persons.\n"),_c('ul',[_c('li',[_v("2b1. JABPro shows an error message and provides course of action for remedy."),_c('br'),_v("\nUse case resumes at step 1.")])])])])}
+with(this){return _c('ul',[_c('li',[_v("2a. User does not provide the correct information for a person to be added.\n"),_c('ul',[_c('li',[_v("2a1. JABPro shows an error message and provides course of action for remedy.\nUse case resumes at step 1.")])])]),_v(" "),_c('li',[_v("2b. User has already been added to the list of persons.\n"),_c('ul',[_c('li',[_v("2b1. JABPro shows an error message and provides course of action for remedy.\nUse case resumes at step 1.")])])])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Use case: Add a remark to a person")])])}
@@ -245,13 +245,13 @@ with(this){return _c('p',[_c('strong',[_v("Use case: Add a remark to a person")]
 with(this){return _c('p',[_c('strong',[_v("MSS")])])}
 },function anonymous(
 ) {
-with(this){return _c('ol',[_c('li',[_v("User requests to add a remark to a person.")]),_v(" "),_c('li',[_v("JABPro shows that command has been executed successfully.")]),_v(" "),_c('li',[_v("JABPro adds the remark to the person."),_c('br'),_v("\nUse case ends.")])])}
+with(this){return _c('ol',[_c('li',[_v("User requests to add a remark to a person.")]),_v(" "),_c('li',[_v("JABPro shows that command has been executed successfully.")]),_v(" "),_c('li',[_v("JABPro adds the remark to the person.\nUse case ends.")])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Extensions")])])}
 },function anonymous(
 ) {
-with(this){return _c('ul',[_c('li',[_v("2a. User provides invalid index.\n"),_c('ul',[_c('li',[_v("2a1. JABPro shows an error message and provides course of action for remedy."),_c('br'),_v("\nUse case resumes at step 1.")])])]),_v(" "),_c('li',[_v("2b. User does not provide a remark.\n"),_c('ul',[_c('li',[_v("2b1. JABPro adds an empty remark to the person, remark no longer seen."),_c('br'),_v("\nUse case ends.")])])])])}
+with(this){return _c('ul',[_c('li',[_v("2a. User provides invalid index.\n"),_c('ul',[_c('li',[_v("2a1. JABPro shows an error message and provides course of action for remedy.\nUse case resumes at step 1.")])])]),_v(" "),_c('li',[_v("2b. User does not provide a remark.\n"),_c('ul',[_c('li',[_v("2b1. JABPro adds an empty remark to the person, remark no longer seen.\nUse case ends.")])])])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Use case: List all persons")])])}
@@ -266,7 +266,7 @@ with(this){return _c('ol',[_c('li',[_v("User  requests to view a list of all per
 with(this){return _c('p',[_c('strong',[_v("Extensions")])])}
 },function anonymous(
 ) {
-with(this){return _c('ul',[_c('li',[_v("2a. User provides an incorrect attribute for sorting (e.g., \"list s/phone\").\n"),_c('ul',[_c('li',[_v("2a1. JABPro shows an error message and provides course of action for remedy."),_c('br'),_v("\nUse case resumes at step 1.")])])]),_v(" "),_c('li',[_v("2b. User attempts to list persons when there are no entries in the address book.\n"),_c('ul',[_c('li',[_v("2b1. JABPro shows a message indicating that there are no persons to display."),_c('br'),_v("\nUse case ends.")])])])])}
+with(this){return _c('ul',[_c('li',[_v("2a. User provides an incorrect attribute for sorting (e.g., \"list s/phone\").\n"),_c('ul',[_c('li',[_v("2a1. JABPro shows an error message and provides course of action for remedy."),_c('br'),_v("\nUse case resumes at step 1.")])])]),_v(" "),_c('li',[_v("2b. User attempts to list persons when there are no entries in the address book.\n"),_c('ul',[_c('li',[_v("2b1. JABPro shows a message indicating that there are no persons to display.\nUse case ends.")])])])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Use case: Search a person by name")])])}
@@ -275,13 +275,13 @@ with(this){return _c('p',[_c('strong',[_v("Use case: Search a person by name")])
 with(this){return _c('p',[_c('strong',[_v("MSS")])])}
 },function anonymous(
 ) {
-with(this){return _c('ol',[_c('li',[_v("Hiring manager types in name keywords to search users by name.")]),_v(" "),_c('li',[_v("JABPro shows a list of persons whose names contain matching keywords."),_c('br'),_v("\nUse case ends.")])])}
+with(this){return _c('ol',[_c('li',[_v("Hiring manager types in name keywords to search users by name.")]),_v(" "),_c('li',[_v("JABPro shows a list of persons whose names contain matching keywords.\nUse case ends.")])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Extensions")])])}
 },function anonymous(
 ) {
-with(this){return _c('ul',[_c('li',[_v("1a. The given name keyword is invalid (invalid name).\n"),_c('ul',[_c('li',[_v("1a1. JABPro shows an error message."),_c('br'),_v("\nUse case resumes at step 1.")])])]),_v(" "),_c('li',[_v("2a. The list is empty."),_c('br'),_v("\nUse case ends.")])])}
+with(this){return _c('ul',[_c('li',[_v("1a. The given name keyword is invalid (invalid name).\n"),_c('ul',[_c('li',[_v("1a1. JABPro shows an error message.\nUse case resumes at step 1.")])])]),_v(" "),_c('li',[_v("2a. The list is empty.\nUse case ends.")])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Use case: Search a person by application status")])])}
@@ -290,13 +290,13 @@ with(this){return _c('p',[_c('strong',[_v("Use case: Search a person by applicat
 with(this){return _c('p',[_c('strong',[_v("MSS")])])}
 },function anonymous(
 ) {
-with(this){return _c('ol',[_c('li',[_v("User keys in search command with application status (i.e. interviewed, pending, rejected, offered).")]),_v(" "),_c('li',[_v("JABPro shows a list of persons whose status match the given status keywords."),_c('br'),_v("\nUse case ends.")])])}
+with(this){return _c('ol',[_c('li',[_v("User keys in search command with application status (i.e. interviewed, pending, rejected, offered).")]),_v(" "),_c('li',[_v("JABPro shows a list of persons whose status match the given status keywords.\nUse case ends.")])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Extensions")])])}
 },function anonymous(
 ) {
-with(this){return _c('ul',[_c('li',[_v("1a. The given name status is invalid (not from the given list of valid status keywords).\n"),_c('ul',[_c('li',[_v("1a1. JABPro shows an error message."),_c('br'),_v("\nUse case resumes at step 1.")])])]),_v(" "),_c('li',[_v("2a. The list is empty."),_c('br'),_v("\nUse case ends.")])])}
+with(this){return _c('ul',[_c('li',[_v("1a. The given name status is invalid (not from the given list of valid status keywords).\n"),_c('ul',[_c('li',[_v("1a1. JABPro shows an error message.\nUse case resumes at step 1.")])])]),_v(" "),_c('li',[_v("2a. The list is empty.\nUse case ends.")])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Use case: Delete a person")])])}
@@ -305,13 +305,13 @@ with(this){return _c('p',[_c('strong',[_v("Use case: Delete a person")])])}
 with(this){return _c('p',[_c('strong',[_v("MSS")])])}
 },function anonymous(
 ) {
-with(this){return _c('ol',[_c('li',[_v("User requests to list persons.")]),_v(" "),_c('li',[_v("AddressBook shows a list of persons.")]),_v(" "),_c('li',[_v("User requests to delete a specific person in the list.")]),_v(" "),_c('li',[_v("AddressBook deletes the person."),_c('br'),_v("\nUse case ends.")])])}
+with(this){return _c('ol',[_c('li',[_v("User requests to list persons.")]),_v(" "),_c('li',[_v("AddressBook shows a list of persons.")]),_v(" "),_c('li',[_v("User requests to delete a specific person in the list.")]),_v(" "),_c('li',[_v("AddressBook deletes the person.\nUse case ends.")])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Extensions")])])}
 },function anonymous(
 ) {
-with(this){return _c('ul',[_c('li',[_v("2a. The list is empty.\n"),_c('ul',[_c('li',[_v("2a1. AddressBook displays a message indicating that the list is empty."),_c('br'),_v("\nUse case ends.")])])]),_v(" "),_c('li',[_v("3a. The given index is invalid.\n"),_c('ul',[_c('li',[_v("3a1. AddressBook shows an error message indicating that the specified index is invalid."),_c('br'),_v("\nUse case resumes at step 3.")])])]),_v(" "),_c('li',[_v("4a. Deletion encounters an error\n"),_c('ul',[_c('li',[_v("4a1. AddressBook displays an error message indicating that the deletion process failed."),_c('br'),_v("\nUse case ends.")])])])])}
+with(this){return _c('ul',[_c('li',[_v("2a. The list is empty.\n"),_c('ul',[_c('li',[_v("2a1. AddressBook displays a message indicating that the list is empty.\nUse case ends.")])])]),_v(" "),_c('li',[_v("3a. The given index is invalid.\n"),_c('ul',[_c('li',[_v("3a1. AddressBook shows an error message indicating that the specified index is invalid.\nUse case resumes at step 3.")])])]),_v(" "),_c('li',[_v("4a. Deletion encounters an error\n"),_c('ul',[_c('li',[_v("4a1. AddressBook displays an error message indicating that the deletion process failed.\nUse case ends.")])])])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Use case: Set a person's status")])])}
@@ -320,13 +320,13 @@ with(this){return _c('p',[_c('strong',[_v("Use case: Set a person's status")])])
 with(this){return _c('p',[_c('strong',[_v("MSS")])])}
 },function anonymous(
 ) {
-with(this){return _c('ol',[_c('li',[_v("User requests to list persons.")]),_v(" "),_c('li',[_v("AddressBook shows a list of persons.")]),_v(" "),_c('li',[_v("User requests to set the status of a specific person in the list.")]),_v(" "),_c('li',[_v("AddressBook sets the status of that person in the list."),_c('br'),_v("\nUse case ends.")])])}
+with(this){return _c('ol',[_c('li',[_v("User requests to list persons.")]),_v(" "),_c('li',[_v("AddressBook shows a list of persons.")]),_v(" "),_c('li',[_v("User requests to set the status of a specific person in the list.")]),_v(" "),_c('li',[_v("AddressBook sets the status of that person in the list.\nUse case ends.")])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Extensions")])])}
 },function anonymous(
 ) {
-with(this){return _c('ul',[_c('li',[_v("2a. The list is empty.\n"),_c('ul',[_c('li',[_v("2a1. AddressBook displays a message indicating that the list is empty."),_c('br'),_v("\nUse case ends.")])])]),_v(" "),_c('li',[_v("3a. The given index is invalid.\n"),_c('ul',[_c('li',[_v("3a1. AddressBook shows an error message indicating that the specified index is invalid."),_c('br'),_v("\nUse case resumes at step 3.")])])]),_v(" "),_c('li',[_v("3b. The given status is invalid.\n"),_c('ul',[_c('li',[_v("3b1. AddressBook shows an error message indicating that the specified status is invalid."),_c('br'),_v("\nUse case resumes at step 3.")])])])])}
+with(this){return _c('ul',[_c('li',[_v("2a. The list is empty.\n"),_c('ul',[_c('li',[_v("2a1. AddressBook displays a message indicating that the list is empty.\nUse case ends.")])])]),_v(" "),_c('li',[_v("3a. The given index is invalid.\n"),_c('ul',[_c('li',[_v("3a1. AddressBook shows an error message indicating that the specified index is invalid.\nUse case resumes at step 3.")])])]),_v(" "),_c('li',[_v("3b. The given status is invalid.\n"),_c('ul',[_c('li',[_v("3b1. AddressBook shows an error message indicating that the specified status is invalid.\nUse case resumes at step 3.")])])])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Use case: Add social profile to person's details")])])}
@@ -398,6 +398,6 @@ with(this){return _c('h3',{attrs:{"id":"saving-data"}},[_v("Saving data"),_c('a'
 with(this){return _c('ol',[_c('li',[_c('p',[_v("Dealing with missing/corrupted data files")]),_v(" "),_c('ol',[_c('li',[_c('em',[_v("{explain how to simulate a missing/corrupted file, and the expected behavior}")])])])]),_v(" "),_c('li',[_c('p',[_c('em',[_v("{ more test cases …​ }")])])])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.1.0")]),_v(", generated on Thu, 19 Oct 2023, 23:34:04 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.1.0")]),_v(", generated on Fri, 20 Oct 2023, 14:43:04 GMT+8]")])])])}
 }];
   
