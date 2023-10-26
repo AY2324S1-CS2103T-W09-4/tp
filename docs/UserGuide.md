@@ -6,10 +6,13 @@
 
 # JABPro User Guide
 
+## Product Overview
+
 JobApplicationsBook Pro (JABPro) is a **desktop app for hiring managers of companies to ease the management of applicants, optimized for use via a  Line Interface** (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, JABPro can get your applicant management tasks done faster than traditional GUI apps.
 
 <!-- * Table of Contents -->
 <page-nav-print />
+
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -21,8 +24,8 @@ JobApplicationsBook Pro (JABPro) is a **desktop app for hiring managers of compa
 
 1. Copy the file to the folder you want to use as the _home folder_ for your JabPro.
 
-1. Open a command terminal, `cd` into the folder you put the jar file in, and use the `java -jar jabpro.jar` command to run the application.<br>
-   A GUI similar to the below should appear in a few seconds. Note how the app contains some sample data.<br>
+1. Open a command terminal, `cd` into the folder you put the jar file in, and use the `java -jar jabpro.jar` command to run the application.<br>  
+   A GUI similar to the below should appear in a few seconds. Note how the app contains some sample data.<br>  
    ![Ui](images/Ui.png)
 
 1. Type the command in the command box and press Enter to execute it.<br>
@@ -120,8 +123,15 @@ Format: `view INDEX`
 * Compatible with search and other features that change the order and content of the list.
 
 Examples:
-* `view 1`
-  Shows the complete details of the 1st person on the list.
+* `view 1` Shows the complete details of the 1st person on the list.
+
+<box type="tip" seamless>
+
+**Tip:** Other operations that affect user's data will trigger a refresh of the view.
+These include `add`, `edit`, `set`, `remark`, `addL`, `addG` 
+
+
+</box>
 
 
 ### Adding Github/LinkedIn username for a user: 'add linkedin/github'
@@ -257,6 +267,12 @@ Clears all entries from the address book.
 
 Format: `clear`
 
+### Exporting all entries : `export`
+
+Exports the entries into a .csv file
+
+Format: `export`
+
 ### Exiting the program : `exit`
 
 Exits the program.
@@ -311,6 +327,7 @@ Action                     | Format, Examples
 **Edit**                   | `edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]…​`<br> e.g.,`edit 2 n/James Lee e/jameslee@example.com`
 **Find**                   | `find KEYWORD [MORE_KEYWORDS]`<br> e.g., `find James Jake`
 **List**                   | `list s/ATTRIBUTE` <br> e.g. `list s/name`
+**Export**                 | `export`
 **Help**                   | `help`
 
 

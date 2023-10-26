@@ -159,6 +159,66 @@ Classes used by multiple components are in the `seedu.addressbook.commons` packa
 
 This section describes some noteworthy details on how certain features are implemented.
 
+### View feature
+
+#### Implementation
+
+The view feature is implemented using the `ViewCommand` class. It extends `Command` and overrides the `execute()` method to display the person's details in full in a new window.
+
+Like every other command class, it involves a command `ViewCommand` class and a parser `ViewCommandParser`. `ViewCommand Parser` takes in the user input and returns a `ViewCommand` object.    
+  
+When executed, `ViewCommand` saves the index of the person to be viewed as `LastViewedPersonIndex` in the `Model` and returns a `CommandResult` object with `isView` property being true.  
+
+By having a `isView` property in `CommandResult`, the `MainWindow` component is able to toggle the `UI` to the view the person of the `LastViewedPersonIndex` after the command has been executed.
+
+
+
+
+
+Given below is an example usage scenario and how the view feature behaves at each step.
+
+Step 1. The user launches the application. The `AddressBook` will be initialized with the current saved address book state
+
+User should see the UI as shown below.  
+
+![Ui](images/Ui.png)
+
+Step 2. The user wants to see the full information displayed for the first person in the displayed list. The user enters the command `view 1` to view the first person in the list.
+
+The following sequence diagram shows how the view operation works:
+
+<puml src="diagrams/ViewSequenceDiagram.puml" alt="ViewSequenceDiagram" />
+
+**Note:** The lifeline for `RemarkCommand` and `RemarkCommandParser` should end at the destroy marker (X) but due to a limitation of PlantUML, the lifeline reaches the end of diagram.
+
+User should see the UI as shown below after entering `View 1`  
+
+![View](images/viewState.png)
+
+Step 3. The user can then read or process the information stored for the viewed person.
+
+
+
+**Note:** The view command can be most effectively used with `search` and `list`. Since the view index is dependent on the Index on the filtered list shown, the user can view the profile after filtering for specific properties in a person using `search` and sorting them using `list`.
+
+Alternatives considered
+
+Alternative 1 (Chosen):   
+The view feature is implemented using the `ViewCommand` class. It extends `Command` and overrides the `execute()` method to display the person's details in full in a new window.  
+
+Pros: Follows the Software Design Patterns of Command. This is the same pattern used for all other commands thus creating consistency.  
+
+Cons: Tougher to implement since other commands do not have the ability to trigger the `ViewCommand` in their execution.  That is we specifically need to set the isView property to true if we want the `ViewCommand` to occur simultaneously with another command.  
+
+Alternative 2 (Not Chosen):  
+The view feature is implemented using the `ViewCommand` class. It extends `Command` and overrides the `execute()` method to display the person's details in full in a new window.  
+Commands that involved viewing will extend `ViewCommand` instead of the `Command` class. All of them are returned as `ViewCommand` to ensure toggling of the UI after command is executed.    
+
+Pros: Arguably a more OOP approach since all commands that trigger view IS-A `ViewCommand`.  
+
+Cons: You cannot implement any command that does not involve viewing but inherits from any command that is a children of `ViewCommand`.  
+An example could be trying to create identical commands that does not toggle the UI after execution. This would require duplication of the exact same command code but inheriting from `Command` instead of `ViewCommand`.
+
 ### \[Proposed\] Undo/redo feature
 
 #### Proposed Implementation
@@ -313,7 +373,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 | `*` | Hiring Manager   | easily get summary statistics such as total offers given out, rejections, cost associated with total offers                   | I can have a summary overview without going into each candidate data specifically                        |
 | `*` | Hiring Manager   | get data on which positions are lacking job applicants                                                                        | I can update the external recruitment team to focus on head hunting applicants for these roles           |
 | `*` | Hiring Manager   | get data on which positions already have too many applicants                                                                  | I can forward this to the department heads to see if they still want to keep the job posting or close it |
-| `*` | Hiring Manager   | get a visual alert or a section to display urgent task                                                                        | I can stay organized and ensure that remain up to date and on task with the hiring process               |
+| `*` | Hiring Manager   | get a visual alert or a section to display urgent task         <br/>                                                               | I can stay organized and ensure that remain up to date and on task with the hiring process               |
+| `*` | Hiring Manager   | export candidate information and application data to a spreadsheet        <br/>                                                    | I can perform further analysis using alternate tools on candidate data                                   |
 *{More to be added}*
 
 ### Use cases
@@ -326,6 +387,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 1. User requests to add a person.
 2. JABPro shows that command has been executed successfully.
 3. JABPro adds the person to the list of persons.
+4. JABPro shows the person added at the end of the list of persons.
 Use case ends.
 
 **Extensions**
@@ -441,6 +503,39 @@ Use case ends.
     * 3b1. AddressBook shows an error message indicating that the specified status is invalid.
       Use case resumes at step 3.
 
+**Use case: View a person's details**
+
+**MSS**
+1.  User requests to list persons.
+2.  AddressBook shows a list of persons.
+3.  User requests to view a specific person in the current displayed AddressBook.
+4.  The UI shows the details of that person.
+    Use case ends.
+
+**Extensions**
+* 2a. The list is empty.
+    * 2a1. AddressBook displays a message indicating that the list is empty.
+      Use case ends.
+* 3a. The given index is invalid.
+    * 3a1. AddressBook shows an error message indicating that the specified index is invalid.  
+      Use case resumes at step 3.
+
+* 3b. User decides to search for a person based on a criteria such as name.
+    * 3b1. Displayed AddressBook changes to match that of search result.  
+      Use case resumes at step 3.
+
+**Use case: Export the current data to excel**
+
+**MSS**
+1.  User requests to export persons.
+2.  JABPro exports the list of persons to a .csv file.
+    Use case ends.
+
+**Extensions**
+* 2a. The .csv file to edit is open
+    * 2a1. AddressBook displays a message indicating that we cannot write to it as it is open.
+      Use case ends.
+
 **Use case: Add social profile to person's details**
 
 **MSS**
@@ -555,3 +650,21 @@ testers are expected to do more *exploratory* testing.
    1. _{explain how to simulate a missing/corrupted file, and the expected behavior}_
 
 1. _{ more test cases …​ }_
+
+## Adding a person while all persons are being shown 
+
+1. Adding a person while all persons are being shown  
+   1. Prerequisites: List all persons using the `list` command. Multiple persons in the list.
+    
+   1. Test case:   
+      `add n/John Poh p/98765432 e/johnpoe@gmail.com a/ 311, Clementi Ave 2, #02-25 r/ 2 years of experience in software development`  
+   
+      **Note**:  The current AddressBook cannot contain anyone named `John Poh`  
+      Expected: New person is added to the list. Details of the new person shown in the status message. 
+   2. Test case:   
+      `add n/John Poh p/98765432 e/johnpoe@gmail.com a/ 311, Clementi Ave 2, #02-25 r/ 2 years of experience in software development`  
+      **Note**:  The current AddressBook should contain a person named `John Poh`
+      Expected: No person is added. Error details shown in the status message. List of persons remains the same.
+
+   
+
