@@ -209,6 +209,7 @@ public class MainWindow extends UiPart<Stage> {
             }
 
             if (commandResult.isView()) {
+                logger.fine("View panel updating.... Viewing person at index " + logic.getLastViewedPersonIndex());
                 handleView();
             }
 
