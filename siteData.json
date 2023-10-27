@@ -51,6 +51,7 @@
         "storage-component": "Storage component",
         "common-classes": "Common classes",
         "implementation": "Implementation",
+        "linkedin-github-feature": "LinkedIn/Github feature",
         "view-feature": "View feature",
         "search-feature": "Search feature",
         "proposed-undo-redo-feature": "[Proposed] Undo/redo feature",

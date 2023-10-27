@@ -1,0 +1,70 @@
+@startuml
+!include style.puml
+skinparam ArrowFontStyle plain
+
+box Logic LOGIC_COLOR_T1
+participant ":LogicManager" as LogicManager LOGIC_COLOR
+participant ":AddressBookParser" as AddressBookParser LOGIC_COLOR
+participant ":AddGCommandParser" as AddGCommandParser LOGIC_COLOR
+participant "a:AddGCommand" as AddGCommand LOGIC_COLOR
+participant ":CommandResult" as CommandResult LOGIC_COLOR
+end box
+
+box Model MODEL_COLOR_T1
+participant ":Model" as Model MODEL_COLOR
+end box
+
+[-> LogicManager : execute("addG 1 u/alexyeoh")
+activate LogicManager
+
+LogicManager -> AddressBookParser : parseCommand("addG 1 u/alexyeoh")
+activate AddressBookParser
+
+create AddGCommandParser
+AddressBookParser -> AddGCommandParser
+activate AddGCommandParser
+
+AddGCommandParser --> AddressBookParser
+deactivate AddGCommandParser
+
+AddressBookParser -> AddGCommandParser : parse("1 u/alexyeoh")
+activate AddGCommandParser
+
+create AddGCommand
+AddGCommandParser -> AddGCommand
+activate AddGCommand
+
+AddGCommand --> AddGCommandParser : a
+deactivate AddGCommand
+
+AddGCommandParser --> AddressBookParser : a
+deactivate AddGCommandParser
+'Hidden arrow to position the destroy marker below the end of the activation bar.
+AddGCommandParser -[hidden]-> AddressBookParser
+destroy AddGCommandParser
+
+AddressBookParser --> LogicManager : a
+deactivate AddressBookParser
+
+LogicManager -> AddGCommand : execute()
+activate AddGCommand
+
+AddGCommand -> Model : addGithub(1, "alexyeoh")
+activate Model
+
+Model --> AddGCommand
+deactivate Model
+
+create CommandResult
+AddGCommand -> CommandResult
+activate CommandResult
+
+CommandResult --> AddGCommand
+deactivate CommandResult
+
+AddGCommand --> LogicManager : result
+deactivate AddGCommand
+
+[<--LogicManager
+deactivate LogicManager
+@enduml

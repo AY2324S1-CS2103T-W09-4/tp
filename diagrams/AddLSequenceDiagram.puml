@@ -1,0 +1,70 @@
+@startuml
+!include style.puml
+skinparam ArrowFontStyle plain
+
+box Logic LOGIC_COLOR_T1
+participant ":LogicManager" as LogicManager LOGIC_COLOR
+participant ":AddressBookParser" as AddressBookParser LOGIC_COLOR
+participant ":AddLCommandParser" as AddLCommandParser LOGIC_COLOR
+participant "a:AddLCommand" as AddLCommand LOGIC_COLOR
+participant ":CommandResult" as CommandResult LOGIC_COLOR
+end box
+
+box Model MODEL_COLOR_T1
+participant ":Model" as Model MODEL_COLOR
+end box
+
+[-> LogicManager : execute("addL 1 u/alexyeoh")
+activate LogicManager
+
+LogicManager -> AddressBookParser : parseCommand("addL 1 u/alexyeoh")
+activate AddressBookParser
+
+create AddLCommandParser
+AddressBookParser -> AddLCommandParser
+activate AddLCommandParser
+
+AddLCommandParser --> AddressBookParser
+deactivate AddLCommandParser
+
+AddressBookParser -> AddLCommandParser : parse("1 u/alexyeoh")
+activate AddLCommandParser
+
+create AddLCommand
+AddLCommandParser -> AddLCommand
+activate AddLCommand
+
+AddLCommand --> AddLCommandParser : a
+deactivate AddLCommand
+
+AddLCommandParser --> AddressBookParser : a
+deactivate AddLCommandParser
+'Hidden arrow to position the destroy marker below the end of the activation bar.
+AddLCommandParser -[hidden]-> AddressBookParser
+destroy AddLCommandParser
+
+AddressBookParser --> LogicManager : a
+deactivate AddressBookParser
+
+LogicManager -> AddLCommand : execute()
+activate AddLCommand
+
+AddLCommand -> Model : addLinkedIn(1, "alexyeoh")
+activate Model
+
+Model --> AddLCommand
+deactivate Model
+
+create CommandResult
+AddLCommand -> CommandResult
+activate CommandResult
+
+CommandResult --> AddLCommand
+deactivate CommandResult
+
+AddLCommand --> LogicManager : result
+deactivate AddLCommand
+
+[<--LogicManager
+deactivate LogicManager
+@enduml
