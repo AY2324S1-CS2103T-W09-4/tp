@@ -212,7 +212,13 @@
         "overview": "Overview",
         "summary-of-contributions": "Summary of Contributions",
         "contributions-to-developer-guide-extracts": "Contributions to Developer Guide(Extracts)",
-        "contributions-to-user-guide-extracts": "Contributions to User Guide(Extracts)"
+        "view-feature": "View feature",
+        "contributions-to-user-guide-extracts": "Contributions to User Guide(Extracts)",
+        "adding-a-remark-to-a-person-remark": "Adding a remark to a person: remark",
+        "viewing-a-person-s-details-view": "Viewing a person's details: view",
+        "editing-a-person-edit": "Editing a person : edit",
+        "filter-job-applicants-by-statistics-filter": "Filter job applicants by statistics: filter",
+        "summary-statistics": "Summary Statistics"
       },
       "headingKeywords": {}
     },
