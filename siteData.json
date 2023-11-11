@@ -113,8 +113,8 @@
       "headings": {
         "jabpro-user-guide": "JABPro User Guide",
         "product-overview": "Product Overview",
-        "key-definitions": "Key definitions",
-        "quick-start": "Quick start",
+        "key-definitions": "Key Definitions",
+        "quick-start": "Quick Start",
         "features": "Features",
         "viewing-help-help": "Viewing help : help",
         "creating-tags-create": "Creating tags: create",
@@ -127,8 +127,8 @@
         "listing-all-tags-listt": "Listing all tags: listT",
         "editing-a-person-edit": "Editing a person : edit",
         "filter-job-applicants-by-statistics-filter": "Filter job applicants by statistics: filter",
-        "search-job-applicants-by-category-search": "Search job applicants by category: search",
-        "deleting-a-person-delete": "Deleting a person : delete",
+        "searching-job-applicants-by-category-search": "Searching job applicants by category: search",
+        "deleting-job-applicants-delete": "Deleting job applicants : delete",
         "setting-an-applicant-s-status-set": "Setting an applicant's status : set",
         "adding-an-event-event": "Adding an Event: event",
         "viewing-events-schedule": "Viewing events: schedule",
@@ -143,8 +143,8 @@
         "editing-tags-edit-tag": "Editing tags : edit tag",
         "exporting-events-export": "Exporting events : export",
         "faq": "FAQ",
-        "known-issues": "Known issues",
-        "command-summary": "Command summary"
+        "command-summary": "Command Summary",
+        "prefix-summary": "Prefix Summary"
       },
       "headingKeywords": {}
     },
