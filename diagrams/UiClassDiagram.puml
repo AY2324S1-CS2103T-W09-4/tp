@@ -16,6 +16,9 @@ Class PersonCard
 Class StatusBarFooter
 Class CommandBox
 Class PersonListInformationPanel
+Class EventWindow
+Class EventListPanel
+Class EventCard
 }
 
 package Model <<Rectangle>> {
@@ -30,13 +33,16 @@ Class HiddenOutside #FFFFFF
 HiddenOutside ..> Ui
 
 UiManager .left.|> Ui
-UiManager -down-> "1" MainWindow
-MainWindow *-down->  "1" CommandBox
+UiManager -down-> "1"MainWindow
+MainWindow*-down->  "1" CommandBox
 MainWindow *-down-> "1" ResultDisplay
 MainWindow *-down-> "1" PersonListPanel
 MainWindow *-down-> "1" StatusBarFooter
 MainWindow *-down-> "1" PersonListInformationPanel
 MainWindow --> "0..1" HelpWindow
+MainWindow --> "0..1" EventWindow
+EventWindow *-down-> "1" EventCard
+EventWindow *-down-> "1" EventListPanel
 
 PersonListPanel -down-> "*" PersonCard
 
@@ -58,9 +64,9 @@ PersonListInformationPanel ..> Model
 UiManager -right-> Logic
 MainWindow -left-> Logic
 
-PersonListPanel -[hidden]left- HelpWindow
-HelpWindow -[hidden]left- CommandBox
-CommandBox -[hidden]left- ResultDisplay
+PersonListPanel -[hidden]left-HelpWindow
+HelpWindow -[hidden]left-CommandBox
+CommandBox -[hidden]left-ResultDisplay
 ResultDisplay -[hidden]left- StatusBarFooter
 
 MainWindow -[hidden]-|> UiPart

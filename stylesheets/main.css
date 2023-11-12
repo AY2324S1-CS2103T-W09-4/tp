@@ -142,3 +142,7 @@ h5,
 h6 {
   color: #e46c0a;
 }
+
+img {
+  border-radius: 50%;
+}

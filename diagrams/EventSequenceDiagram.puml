@@ -1,0 +1,76 @@
+@startuml
+!include style.puml
+skinparam ArrowFontStyle plain
+
+box Logic LOGIC_COLOR_T1
+participant ":LogicManager" as LogicManager LOGIC_COLOR
+participant ":AddressBookParser" as AddressBookParser LOGIC_COLOR
+participant ":EventCommandParser" as EventCommandParser LOGIC_COLOR
+participant "e:EventCommand" as EventCommand LOGIC_COLOR
+participant ":CommandResult" as CommandResult LOGIC_COLOR
+end box
+
+box Model MODEL_COLOR_T1
+participant ":Model" as Model MODEL_COLOR
+end box
+
+[-> LogicManager : execute("event 1 d/...")
+activate LogicManager
+
+LogicManager -> AddressBookParser : parseCommand("event 1 d/")
+activate AddressBookParser
+
+create EventCommandParser
+AddressBookParser -> EventCommandParser
+activate EventCommandParser
+
+EventCommandParser --> AddressBookParser
+deactivate EventCommandParser
+
+AddressBookParser -> EventCommandParser : parse("1 d/Interview bt/...")
+activate EventCommandParser
+
+create EventCommand
+EventCommandParser -> EventCommand
+activate EventCommand
+
+EventCommand --> EventCommandParser : e
+deactivate EventCommand
+
+EventCommandParser --> AddressBookParser : e
+deactivate EventCommandParser
+'Hidden arrow to position the destroy marker below the end of the activation bar.
+EventCommandParser -[hidden]-> AddressBookParser
+destroy EventCommandParser
+
+AddressBookParser --> LogicManager : e
+deactivate AddressBookParser
+
+LogicManager -> EventCommand : execute()
+activate EventCommand
+
+EventCommand -> Model: getFilteredPersonList()
+activate Model
+
+Model --> EventCommand
+deactivate Model
+
+EventCommand -> Model : addEvent()
+activate Model
+
+Model --> EventCommand
+deactivate Model
+
+create CommandResult
+EventCommand -> CommandResult
+activate CommandResult
+
+CommandResult --> EventCommand
+deactivate CommandResult
+
+EventCommand --> LogicManager : result
+deactivate EventCommand
+
+[<--LogicManager
+deactivate LogicManager
+@enduml
