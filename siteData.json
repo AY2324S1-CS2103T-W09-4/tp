@@ -67,7 +67,11 @@
         "launch-and-shutdown": "Launch and shutdown",
         "deleting-a-person": "Deleting a person",
         "saving-data": "Saving data",
-        "adding-a-person-while-all-persons-are-being-shown": "Adding a person while all persons are being shown"
+        "adding-a-person-while-all-persons-are-being-shown": "Adding a person while all persons are being shown",
+        "planned-enhancements": "Planned Enhancements",
+        "deleting-tags-delete-tag": "Deleting tags : delete tag",
+        "editing-tags-edit-tag": "Editing tags : edit tag",
+        "exporting-events-export": "Exporting events : export"
       },
       "headingKeywords": {}
     },
@@ -140,10 +144,6 @@
         "summary-statistics": "Summary Statistics",
         "saving-the-data": "Saving the data",
         "editing-the-data-file": "Editing the data file",
-        "planned-enhancements": "Planned Enhancements",
-        "deleting-tags-delete-tag": "Deleting tags : delete tag",
-        "editing-tags-edit-tag": "Editing tags : edit tag",
-        "exporting-events-export": "Exporting events : export",
         "faq": "FAQ",
         "command-summary": "Command Summary",
         "prefix-summary": "Prefix Summary"

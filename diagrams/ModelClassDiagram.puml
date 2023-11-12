@@ -17,6 +17,7 @@ Class UserPrefs
 Class SummaryStatistic
 Class ObservablePersonList
 
+Class UniqueTagList
 Class UniquePersonList
 Class Person
 Class Address
@@ -62,9 +63,11 @@ SummaryStatistic *--> "1" ObservablePersonList
 EventBook *--> "1" UniqueEventList
 UniqueEventList --> "~* all" Event
 
+AddressBook *--> "1" UniqueTagList
 AddressBook *--> "1" UniquePersonList
 AddressBook *--> "1" ObservablePersonList
 UniquePersonList --> "~* all" Person
+UniqueTagList --> "~*" Tag
 ObservablePersonList --> "~* filtered" Person
 Person *--> Name
 Person *--> Phone
@@ -72,12 +75,12 @@ Person *--> Email
 Person *--> Address
 Person *--> Remark
 Person *--> ScoreList
-Person *--> "*" Tag
+Person -left-> "*" Tag
 Person *--> Status
 Person *--> Github
 Person *--> Linkedin
 
-ScoreList -left-> "*" Tag
+ScoreList -up-> "*" Tag
 ScoreList -down-> "*" Score
 
 Person -[hidden]up--> I

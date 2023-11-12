@@ -44,7 +44,12 @@ skinparam Class {
     FontSize 15
     BorderThickness 1
     BorderColor #FFFFFF
-    StereotypeFontColor #FFFFFF
+    StereotypeFontColor #000000
+    FontName Arial
+}
+
+skinparam ClassAttribute {
+    FontColor #FFFFFF
     FontName Arial
 }
 
@@ -75,5 +80,5 @@ skinparam DefaultTextAlignment center
 skinparam packageStyle Rectangle
 
 hide footbox
-hide members
 hide circle
+hide empty members

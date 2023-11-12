@@ -18,10 +18,12 @@ package "AddressBook Storage" #F4F6F6{
 Class "<<interface>>\nAddressBookStorage" as AddressBookStorage
 Class JsonAddressBookStorage
 Class JsonSerializableAddressBook
-Class JsonAdaptedPerson
-Class JsonAdaptedTag
+Class JsonAdaptedPerson {
+  - tags: List<Map<String, String>>
+}
 Class JsonAdaptedScoreList
 }
+
 
 package "EventBook Storage" #F4F6F6{
 Class "<<interface>>\nEventBookStorage" as EventBookStorage
@@ -48,10 +50,12 @@ JsonUserPrefsStorage .up.|> UserPrefsStorage
 JsonAddressBookStorage .up.|> AddressBookStorage
 JsonAddressBookStorage ..> JsonSerializableAddressBook
 JsonSerializableAddressBook --> "*" JsonAdaptedPerson
-JsonAdaptedPerson --> "*" JsonAdaptedTag
 JsonAdaptedPerson --> "1" JsonAdaptedScoreList
+
 JsonEventBookStorage .up.|> EventBookStorage
 JsonEventBookStorage ..> JsonSerializableEventBook
 JsonSerializableEventBook --> "*" JsonAdaptedEvent
+
+
 
 @enduml
