@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+|User|
+start
+:Start JABPro;
+:Enter event command;
+if (CommandIsSuccessful) then (true)
+  |JABPro|
+  :Add event to EventBook;
+  |User|
+  :Enter schedule command;
+  |JABPro|
+  :Open the Events window;
+  |User|
+else (false)
+  |JABPro|
+  :Display error message and provide remedy;
+  |User|
+
+endif
+
+stop
+
+@enduml
