@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+|User|
+start
+:Start JABPro;
+:Enter Set command;
+if (CommandIsSuccessful) then (true)
+  |JABPro|
+  :Set specified user to the specified status;
+  |User|
+  :Enter view command;
+  |JABPro|
+  :Show the updated user profile;
+  |User|
+else (false)
+  |JABPro|
+  :Display error message and provide remedy;
+  |User|
+
+endif
+
+stop
+
+@enduml
