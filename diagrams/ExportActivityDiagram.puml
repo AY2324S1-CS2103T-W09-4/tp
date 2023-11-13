@@ -1,4 +1,7 @@
 @startuml
+skin rose
+skinparam ActivityFontSize 15
+skinparam ArrowFontSize 12
 'https://plantuml.com/activity-diagram-beta
 skin rose
 skinparam ActivityFontSize 15
@@ -7,10 +10,10 @@ skinparam ArrowFontSize 12
 start
 :Start JABPro;
 :Enter export command;
-if (CommandIsSuccessful) then (true)
+if (CommandIsSuccessful) then ([true])
   |JABPro|
   :Exports existing data to /data/export.csv;
-else (false)
+else ([false])
   |JABPro|
   :Display error message and provide remedy;
   |User|

@@ -4,7 +4,7 @@
 start
 :Start JABPro;
 :Enter Set command;
-if (CommandIsSuccessful) then (true)
+if (CommandIsSuccessful) then ([true])
   |JABPro|
   :Set specified user to the specified status;
   |User|
@@ -12,7 +12,7 @@ if (CommandIsSuccessful) then (true)
   |JABPro|
   :Show the updated user profile;
   |User|
-else (false)
+else ([false])
   |JABPro|
   :Display error message and provide remedy;
   |User|
