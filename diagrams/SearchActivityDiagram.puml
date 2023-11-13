@@ -1,0 +1,21 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+|User|
+skin rose
+skinparam ActivityFontSize 15
+skinparam ArrowFontSize 12
+start
+:Start JABPro;
+:User enters command;
+
+if () then ([command successfully executed])
+    |JABPro|
+    :Display filtered
+    list based on the
+    predicate (i.e. name,
+    and/status, and/ tag);
+else ([command fails to execute])
+    :Show error message;
+endif
+stop
+@enduml

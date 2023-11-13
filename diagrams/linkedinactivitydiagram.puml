@@ -4,6 +4,9 @@ skin rose
 skinparam ActivityFontSize 15
 skinparam ArrowFontSize 12
 |User|
+skin rose
+skinparam ActivityFontSize 15
+skinparam ArrowFontSize 12
 start
 :Start JABPro;
 :Enter addL/addG command;
