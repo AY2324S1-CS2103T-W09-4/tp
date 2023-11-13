@@ -72,6 +72,7 @@
         "improve-on-filter-feature-filter": "Improve on Filter feature: filter",
         "appendix-effort": "Appendix: Effort",
         "based-on-over-arching-features": "Based on over-arching features",
+        "flexibility-for-further-analysis": "Flexibility for further analysis",
         "storage-complications-and-effort": "Storage Complications and Effort",
         "appendix-instructions-for-manual-testing": "Appendix: Instructions for manual testing",
         "launch-and-shutdown": "Launch and shutdown",
@@ -81,6 +82,8 @@
         "editing-a-person-s-score-for-an-assessment-type-tag-while-all-persons-are-being-shown": "Editing a person's score for an assessment type tag while all persons are being shown",
         "adding-a-remark-to-a-person-while-all-persons-are-being-shown": "Adding a remark to a person while all persons are being shown",
         "viewing-a-person-s-details-while-all-persons-are-being-shown": "Viewing a person's details while all persons are being shown",
+        "setting-a-person-s-status-preliminary-interviewed-accepted-rejected": "Setting a person's status (Preliminary, Interviewed, Accepted/Rejected.)",
+        "exporting-the-information-into-a-csv-file": "Exporting the information into a csv file",
         "filtering-persons-by-their-scores-for-a-particular-tag-based-on-a-particular-metric-while-all-persons-are-being-shown": "Filtering persons by their scores for a particular tag based on a particular metric while all persons are being shown"
       },
       "headingKeywords": {}
