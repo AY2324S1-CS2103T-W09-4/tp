@@ -1,0 +1,29 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+skin rose
+skinparam ActivityFontSize 15
+skinparam ArrowFontSize 12
+
+|User|
+start
+:Start JABPro;
+:Enter Command that Triggers View;
+if () then ([CommandExecuted])
+  |JABPro|
+  :Carry out relevant changes to the specified applicant;
+  |JABPro|
+  :Details of specified applicant are saved to the database;
+
+  |JABPro|
+  :Open the updated Person Information Panel;
+  |User|
+else ([Invalid Command])
+  |JABPro|
+  :Display error message and provide remedy;
+  |User|
+
+endif
+
+stop
+
+@enduml
