@@ -214,7 +214,14 @@
       "headings": {
         "project-jabpro": "Project: JABPRO",
         "overview": "Overview",
-        "summary-of-contributions": "Summary of Contributions"
+        "summary-of-contributions": "Summary of Contributions",
+        "code-contribution": "Code Contribution",
+        "enhancements-implemented": "Enhancements Implemented",
+        "contribution-to-the-ug": "Contribution to the UG",
+        "contribution-to-dg": "Contribution to DG",
+        "contribution-to-team-based-tasks": "Contribution to team-based tasks",
+        "review-mentoring-contributions": "Review/mentoring contributions",
+        "community": "Community"
       },
       "headingKeywords": {}
     },
