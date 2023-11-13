@@ -84,7 +84,10 @@
         "viewing-a-person-s-details-while-all-persons-are-being-shown": "Viewing a person's details while all persons are being shown",
         "setting-a-person-s-status-preliminary-interviewed-accepted-rejected": "Setting a person's status (Preliminary, Interviewed, Accepted/Rejected.)",
         "exporting-the-information-into-a-csv-file": "Exporting the information into a csv file",
-        "filtering-persons-by-their-scores-for-a-particular-tag-based-on-a-particular-metric-while-all-persons-are-being-shown": "Filtering persons by their scores for a particular tag based on a particular metric while all persons are being shown"
+        "filtering-persons-by-their-scores-for-a-particular-tag-based-on-a-particular-metric-while-all-persons-are-being-shown": "Filtering persons by their scores for a particular tag based on a particular metric while all persons are being shown",
+        "adding-linkedin-github-username-to-a-person-while-all-persons-are-being-shown": "Adding LinkedIn/Github username to a person while all persons are being shown",
+        "viewing-person-s-social-profile": "Viewing person's social profile",
+        "adding-event-relating-to-a-candidate": "Adding Event relating to a candidate"
       },
       "headingKeywords": {}
     },

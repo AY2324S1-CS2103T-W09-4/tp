@@ -49,10 +49,22 @@ deactivate AddressBookParser
 LogicManager -> AddGCommand : execute()
 activate AddGCommand
 
-AddGCommand -> Model : addGithub(1, "alexyeoh")
+AddGCommand -> Model : getFilteredPersonList()
 activate Model
 
 Model --> AddGCommand
+deactivate Model
+
+AddGCommand -> Model : setLastViewedPersonIndex()
+activate Model
+
+Model -> AddGCommand
+deactivate Model
+
+AddGCommand -> Model : setPerson()
+activate Model
+
+Model -> AddGCommand
 deactivate Model
 
 create CommandResult

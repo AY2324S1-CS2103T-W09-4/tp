@@ -49,10 +49,22 @@ deactivate AddressBookParser
 LogicManager -> AddLCommand : execute()
 activate AddLCommand
 
-AddLCommand -> Model : addLinkedIn(1, "alexyeoh")
+AddLCommand -> Model : getFilteredPersonList()
 activate Model
 
 Model --> AddLCommand
+deactivate Model
+
+AddLCommand -> Model : setLastViewedPersonIndex()
+activate Model
+
+Model -> AddLCommand
+deactivate Model
+
+AddLCommand -> Model : setPerson()
+activate Model
+
+Model -> AddLCommand
 deactivate Model
 
 create CommandResult

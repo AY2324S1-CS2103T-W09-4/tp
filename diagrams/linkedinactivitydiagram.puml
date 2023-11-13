@@ -1,10 +1,13 @@
 @startuml
 'https://plantuml.com/activity-diagram-beta
+skin rose
+skinparam ActivityFontSize 15
+skinparam ArrowFontSize 12
 |User|
 start
 :Start JABPro;
 :Enter addL/addG command;
-if (CommandIsSuccessful) then ([true])
+if () then ([Command executed successfully])
   |JABPro|
   :Add username to candidates existing details;
   |User|
@@ -12,7 +15,7 @@ if (CommandIsSuccessful) then ([true])
   |JABPro|
   :Redirect user to page of the social profile;
   |User|
-else ([false])
+else ([Command execution failed])
   |JABPro|
   :Display error message and provide remedy;
   |User|
