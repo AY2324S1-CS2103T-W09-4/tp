@@ -10,10 +10,10 @@ skinparam ArrowFontSize 12
 start
 :Start JABPro;
 :Enter export command;
-if (CommandIsSuccessful) then ([true])
+if () then ([Command executes successfully])
   |JABPro|
   :Exports existing data to /data/export.csv;
-else ([false])
+else ([Command fails to execute])
   |JABPro|
   :Display error message and provide remedy;
   |User|

@@ -10,8 +10,8 @@ start
 
 if () then ([Command successfully executed])
     |JABPro|
-    :Display list without
-    the deleted applicant(s);
+    :Create tag and
+    add to global tag list;
 else ([Command fails to execute])
     :Show error message;
 endif

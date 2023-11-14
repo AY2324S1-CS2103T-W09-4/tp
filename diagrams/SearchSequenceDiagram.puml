@@ -2,6 +2,7 @@
 !include style.puml
 skinparam ArrowFontStyle plain
 
+scale 2.0
 
 box Logic LOGIC_COLOR_T1
 participant ":LogicManager" as LogicManager LOGIC_COLOR

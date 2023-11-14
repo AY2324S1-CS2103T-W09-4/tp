@@ -1,10 +1,13 @@
 @startuml
 'https://plantuml.com/activity-diagram-beta
 |User|
+skin rose
+skinparam ActivityFontSize 15
+skinparam ArrowFontSize 12
 start
 :Start JABPro;
 :Enter Set command;
-if (CommandIsSuccessful) then ([true])
+if () then ([Command executes successfully])
   |JABPro|
   :Set specified user to the specified status;
   |User|
@@ -12,7 +15,7 @@ if (CommandIsSuccessful) then ([true])
   |JABPro|
   :Show the updated user profile;
   |User|
-else ([false])
+else ([Command fails to execute])
   |JABPro|
   :Display error message and provide remedy;
   |User|
