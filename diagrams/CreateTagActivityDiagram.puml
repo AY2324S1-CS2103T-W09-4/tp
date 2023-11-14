@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+|User|
+skin rose
+skinparam ActivityFontSize 15
+skinparam ArrowFontSize 12
+start
+:Start JABPro;
+:User enters create command;
+
+if () then ([Command successfully executed])
+    |JABPro|
+    :Create tag and
+    add to global tag list;
+else ([Command fails to execute])
+    :Show error message;
+endif
+stop
+@enduml

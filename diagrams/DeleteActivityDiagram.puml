@@ -6,12 +6,12 @@ skinparam ActivityFontSize 15
 skinparam ArrowFontSize 12
 start
 :Start JABPro;
-:User enters command;
+:User enters delete command;
 
 if () then ([Command successfully executed])
     |JABPro|
-    :Create tag and
-    add to global tag list;
+    :Display list without
+    the deleted applicant(s);
 else ([Command fails to execute])
     :Show error message;
 endif
